@@ -12,3 +12,37 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+// Closes current window
+// Directs to login window
+void MainWindow::on_pushButton_LOGOUT_clicked()
+{
+    loginWindow* logWin = new loginWindow(this);
+    this->close();
+    logWin->show();
+}
+
+// Closes current window
+// Directs to add login window
+void MainWindow::on_pushButton_ADD_clicked()
+{
+    addLogin* addWin = new addLogin(this);
+    this->close();
+    addWin->show();
+}
+
+// Closes current window
+// Directs to delete login window
+void MainWindow::on_pushButton_DELETE_clicked()
+{
+    deleteLogin* deleteWin = new deleteLogin(this);
+    this->close();
+    deleteWin->show();
+}
+
+// NEEDS TO BE IMPLEMENTED <---------------- DEVELOPERS PLEASE LOOK
+// Edit Login record information
+void MainWindow::on_pushButton_EDIT_clicked()
+{
+    QMessageBox::information(this,QObject::tr("System Message"),tr("Will be implemented soon!"),QMessageBox::Ok);
+}

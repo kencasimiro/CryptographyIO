@@ -26,12 +26,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    databaseManager.cpp
+    databaseManager.cpp \
+    login.cpp \
+    loginManager.cpp \
+    loginWindow.cpp \
+    addLogin.cpp \
+    deleteLogin.cpp
 
 HEADERS += \
         mainwindow.h \
     constants.h \
-    databaseManager.h
+    databaseManager.h \
+    login.h \
+    loginManager.h \
+    loginWindow.h \
+    addLogin.h \
+    deleteLogin.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    loginWindow.ui \
+    addLogin.ui \
+    deleteLogin.ui
