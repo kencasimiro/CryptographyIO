@@ -8,7 +8,7 @@ deleteLogin::deleteLogin(QWidget *parent) :
     ui->setupUi(this);
 
     QSqlQuery query;
-    query.prepare("SELECT * FROM loginInfo");       // selects all from loginInfo table in SQLite
+    query.prepare("SELECT * FROM LoginInfo");       // selects all from loginInfo table in SQLite
     query.exec();                                   // executes the prepare
 
     ui->tableWidget->setColumnCount(5);                                                                                 // determines column size to 5
@@ -67,7 +67,7 @@ void deleteLogin::on_pushButton_SUBMIT_clicked()
     ui->tableWidget->setRowCount(0);            // set row count to 0
 
     QSqlQuery query;
-    query.prepare("SELECT * FROM loginInfo");   // selects all from loginInfo table
+    query.prepare("SELECT * FROM LoginInfo");   // selects all from loginInfo table
     query.exec();                               // executes the prepare
 
     ui->tableWidget->setColumnCount(5);                                                                                     // sets column count to 5

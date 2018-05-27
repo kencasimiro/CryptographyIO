@@ -20,7 +20,7 @@ bool loginManager::createLoginAccount(const login &Login) const
     }
 
     QSqlQuery insertQuery;
-    insertQuery.prepare("INSERT INTO loginInfo (id, email, username, password, salt) VALUES(:idNum, :emailAddress, :username, :password, :salt)");  // creates a new login record with user input into their respective areas
+    insertQuery.prepare("INSERT INTO LoginInfo (id, email, username, password, salt) VALUES(:idNum, :emailAddress, :username, :password, :salt)");  // creates a new login record with user input into their respective areas
     insertQuery.bindValue("idNum", Login.getId());              // gets user input of id num (does not since it is auto incremented - check database
     insertQuery.bindValue(":emailAddress", Login.getEmail());   // gets user input - email address
     insertQuery.bindValue(":username", Login.getUsername());    // gets user input - username
@@ -43,7 +43,7 @@ bool loginManager::createLoginAccount(const login &Login) const
 bool loginManager::deleteLoginAccount(int loginId) const
 {
     QSqlQuery deleteQuery;
-    deleteQuery.prepare("DELETE FROM loginInfo WHERE id = :idID");  // finds the record with the id number
+    deleteQuery.prepare("DELETE FROM LoginInfo WHERE id = :idID");  // finds the record with the id number
     deleteQuery.bindValue(":idID", loginId);                        // gets user input - id number
 
     // checks if its in the database or not (error check)
@@ -51,7 +51,7 @@ bool loginManager::deleteLoginAccount(int loginId) const
     QString temp;
     temp = QString::number(loginId);
     QSqlQuery query;
-    query.prepare("SELECT * FROM loginInfo");
+    query.prepare("SELECT * FROM LoginInfo");
     query.bindValue(":id", loginId);
     query.exec();
     while(query.next())
@@ -92,7 +92,7 @@ bool loginManager::updateLoginAccount(const login &Login) const
 {
     QSqlQuery updateQuery;
 
-    updateQuery.prepare("UPDATE loginInfo SET email = :emailAddress, username = :username, password = :password, salt = :salt WHERE id = :userId");
+    updateQuery.prepare("UPDATE LoginInfo SET email = :emailAddress, username = :username, password = :password, salt = :salt WHERE id = :userId");
     updateQuery.bindValue(":emailAddress", Login.getEmail());
     updateQuery.bindValue(":username", Login.getUsername());
     updateQuery.bindValue(":password", Login.getPassword());
@@ -117,7 +117,7 @@ login loginManager::authenticate(const QString &Username, const QString &Passwor
     loginManager::instance();   // gets an instance of loginManager
     QSqlQuery query;
 
-    query.prepare("SELECT id, email, username, password, salt FROM loginInfo WHERE username = (:Username)");    // selects all from loginInfo where username matches
+    query.prepare("SELECT id, email, username, password, salt FROM LoginInfo WHERE username = (:Username)");    // selects all from loginInfo where username matches
     query.bindValue(":Username", Username);                     // gets user input - username
 
     if(query.exec())

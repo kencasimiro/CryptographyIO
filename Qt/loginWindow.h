@@ -5,6 +5,7 @@
 
 #include "loginManager.h"
 #include "mainwindow.h"
+#include "forgotUsername.h"
 
 namespace Ui {
 class loginWindow;

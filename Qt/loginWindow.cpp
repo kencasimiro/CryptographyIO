@@ -43,7 +43,9 @@ void loginWindow::on_pushButton_submit_clicked()
 
 void loginWindow::on_pushButton_FORGOTUNAME_clicked()
 {
-    QMessageBox::information(this,QObject::tr("System Message"),tr("Will be implemented soon!"),QMessageBox::Ok);
+    forgotUsername* forgotUname = new forgotUsername(this);
+    this->close();                                                                                        // closes current window
+    forgotUname->show();                                                                                  // directs to forgot username window
 }
 
 void loginWindow::on_pushButton_FORGOTPASS_clicked()

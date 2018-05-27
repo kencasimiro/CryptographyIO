@@ -31,7 +31,8 @@ SOURCES += \
     loginManager.cpp \
     loginWindow.cpp \
     addLogin.cpp \
-    deleteLogin.cpp
+    deleteLogin.cpp \
+    forgotUsername.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -41,10 +42,12 @@ HEADERS += \
     loginManager.h \
     loginWindow.h \
     addLogin.h \
-    deleteLogin.h
+    deleteLogin.h \
+    forgotUsername.h
 
 FORMS += \
         mainwindow.ui \
     loginWindow.ui \
     addLogin.ui \
-    deleteLogin.ui
+    deleteLogin.ui \
+    forgotUsername.ui
