@@ -50,5 +50,7 @@ void loginWindow::on_pushButton_FORGOTUNAME_clicked()
 
 void loginWindow::on_pushButton_FORGOTPASS_clicked()
 {
-    QMessageBox::information(this,QObject::tr("System Message"),tr("Will be implemented soon!"),QMessageBox::Ok);
+    forgotPassword* forgotPword = new forgotPassword(this);
+    this->close();                                                                                        // closes current window
+    forgotPword->show();                                                                                  // durects to forgot password
 }

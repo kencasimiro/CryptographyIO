@@ -5,6 +5,11 @@
 
 #include <QString>                  // used for string equivalent in Qt
 
+/**
+ *@author Kenneth Casimiro
+ *@date May 2018
+ */
+
 const int UNASSIGNED_DB_ID = -1;    // for database error check
 
 

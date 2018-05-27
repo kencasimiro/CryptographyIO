@@ -32,7 +32,9 @@ SOURCES += \
     loginWindow.cpp \
     addLogin.cpp \
     deleteLogin.cpp \
-    forgotUsername.cpp
+    forgotUsername.cpp \
+    forgotPassword.cpp \
+    randomString.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -43,11 +45,14 @@ HEADERS += \
     loginWindow.h \
     addLogin.h \
     deleteLogin.h \
-    forgotUsername.h
+    forgotUsername.h \
+    forgotPassword.h \
+    randomString.h
 
 FORMS += \
         mainwindow.ui \
     loginWindow.ui \
     addLogin.ui \
     deleteLogin.ui \
-    forgotUsername.ui
+    forgotUsername.ui \
+    forgotPassword.ui

@@ -6,6 +6,12 @@
 #include "loginManager.h"
 #include "mainwindow.h"
 #include "forgotUsername.h"
+#include "forgotPassword.h"
+
+/**
+ *@author Kenneth Casimiro
+ *@date May 2018
+ */
 
 namespace Ui {
 class loginWindow;

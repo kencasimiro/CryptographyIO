@@ -34,7 +34,7 @@ void forgotUsername::on_pushButton_SUBMIT_clicked()
         else
         {
             QSqlQuery query;
-            query.prepare("SELECT id, email, username FROM loginInfo WHERE id = :id AND email = :email");   // selects data from sql database
+            query.prepare("SELECT id, email, username FROM LoginInfo WHERE id = :id AND email = :email");   // selects data from sql database
             query.bindValue(":id", id);         // gets user input of id to use in sql
             query.bindValue(":email", email);   // gets user input of email to use in sql
 

@@ -1,7 +1,6 @@
 #include "addLogin.h"
 #include "ui_addLogin.h"
-
-QString GetRandomString();                  // function prototype for GetRandomString()
+#include "randomString.h"           // random generated string function
 
 addLogin::addLogin(QWidget *parent) :
     QDialog(parent),
@@ -40,18 +39,18 @@ void addLogin::on_pushButton_SUBMIT_clicked()
 
     QString salt = GetRandomString();                           // calls GetRandomString to generate a random 12 character string
 
-    qDebug() << password << " <---- BEFORE SALT";               // error-check in console for password
-    qDebug() << salt     << " <---- AFTER random string";       // error-check in console for random generated string (salt)
+    qDebug() << password << " <---- BEFORE SALT - addLogin";               // error-check in console for password
+    qDebug() << salt     << " <---- AFTER random string - addLogin";       // error-check in console for random generated string (salt)
 
     password = password + salt;                                 // combines the password and salt
 
-    qDebug() << password << " <---- AFTER SALT";                // error-check in console for the password+salt
+    qDebug() << password << " <---- AFTER SALT - addLogin";                // error-check in console for the password+salt
 
     QByteArray hash = QCryptographicHash::hash(password.toLocal8Bit(), QCryptographicHash::Sha256);     // cmputes the hash of the password+salt with the SHA256 algorithm
 
     hash = hash.toHex();            // converts the hash to hex for ASCII (string)
 
-    qDebug() << hash << " <----- HASH";                         // error check in console for generated hash
+    qDebug() << hash << " <----- HASH - addLogin";                         // error check in console for generated hash
 
     bool n;
 
@@ -60,7 +59,7 @@ void addLogin::on_pushButton_SUBMIT_clicked()
     if(n == true)       // checks if its successfull
     {
         QSqlQuery query;
-        query.prepare("INSERT INTO loginInfo (email, username, password) VALUES (:email, :username, :password)");       // puts the record into the loginInfo table with its correct variables
+        query.prepare("INSERT INTO LoginInfo (email, username, password) VALUES (:email, :username, :password)");       // puts the record into the loginInfo table with its correct variables
         query.bindValue(":email", email);           // gets user input into SQL for email
         query.bindValue(":username", username);     // gets user input into SQL for username
         query.bindValue(":password", password);     // gets user input into SQL for password
@@ -76,20 +75,4 @@ void addLogin::on_pushButton_SUBMIT_clicked()
     ui->lineEdit_EMAIL->clear();            // clears user input - email
     ui->lineEdit_USERNAME->clear();         // clears user input - username
     ui->lineEdit_PASSWORD->clear();         // clears user input - password
-}
-
-// Function to generate a random string
-QString GetRandomString()
-{
-   const QString possibleCharacters("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789");      // up to 64 characters
-   const int randomStringLength = 12;       // can change how long the salt can be (make it more complex; harder to be brute forced in)
-
-   QString randomString;
-   for(int i=0; i<randomStringLength; ++i)
-   {
-       int index = qrand() % possibleCharacters.length();
-       QChar nextChar = possibleCharacters.at(index);
-       randomString.append(nextChar);
-   }
-   return randomString;
 }

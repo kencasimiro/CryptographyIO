@@ -8,6 +8,10 @@
 #include "addLogin.h"
 #include "deleteLogin.h"
 
+/**
+ *@author Kenneth Casimiro
+ *@date May 2018
+ */
 namespace Ui {
 class MainWindow;
 }
@@ -26,8 +30,6 @@ private slots:
     void on_pushButton_ADD_clicked();           // add login
 
     void on_pushButton_DELETE_clicked();        // delete login
-
-    void on_pushButton_EDIT_clicked();          // edit login
 
 private:
     Ui::MainWindow *ui;

@@ -3,8 +3,12 @@
 
 #include <QDialog>
 
-
 #include "loginWindow.h"
+
+/**
+ *@author Kenneth Casimiro
+ *@date May 2018
+ */
 
 namespace Ui {
 class forgotUsername;

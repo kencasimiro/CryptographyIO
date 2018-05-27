@@ -39,10 +39,3 @@ void MainWindow::on_pushButton_DELETE_clicked()
     this->close();
     deleteWin->show();
 }
-
-// NEEDS TO BE IMPLEMENTED <---------------- DEVELOPERS PLEASE LOOK
-// Edit Login record information
-void MainWindow::on_pushButton_EDIT_clicked()
-{
-    QMessageBox::information(this,QObject::tr("System Message"),tr("Will be implemented soon!"),QMessageBox::Ok);
-}

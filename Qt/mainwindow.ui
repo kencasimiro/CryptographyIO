@@ -39,13 +39,6 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_EDIT">
-       <property name="text">
-        <string>Edit Login</string>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QPushButton" name="pushButton_LOGOUT">
        <property name="text">
         <string>Logout</string>
