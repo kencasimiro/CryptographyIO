@@ -33,9 +33,9 @@ Run in Qt 5.11.0
 
 ## Authors
 
-* **Kenneth Casimiro** - Programmer - [wuwukennywu](https://github.com/wuwukennywu)
+* **Kenneth Casimiro** - Programmer - [wuwukennywu](https://github.com/boolenciaga)
 
-See also the list of [contributors](https://github.com/wuwukennywu/HashSaltPassword/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/boolenciaga/HashSaltPassword/graphs/contributors) who participated in this project.
 
 ## License
 
