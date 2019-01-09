@@ -33,7 +33,7 @@ Run in Qt 5.11.0
 
 ## Authors
 
-* **Kenneth Casimiro** - Programmer - [wuwukennywu](https://github.com/boolenciaga)
+* **Kenneth Casimiro** - Programmer - [boolenciaga](https://github.com/boolenciaga)
 
 See also the list of [contributors](https://github.com/boolenciaga/HashSaltPassword/graphs/contributors) who participated in this project.
 
