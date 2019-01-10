@@ -1,6 +1,8 @@
 # Hash and Salt a Password
 This program hashes using the SHA256 algorithm and appeneds a password with a random generated salt.
 
+A qt application that allows the user to create an account (username and password) through a one way cryptographic function (SHA256). Program also creates a salt to be added to the pre-hash password to safeguard passwords in storage. Password and salt is stored in SQLite as hashed. User is able to change their password as well and see through the console of what the one way function hashes out. The program demonstrates the importance of using a one-way cryptographic function rather than 'encryption' so no one can decrypt the password back to the original text.
+
 When creating a login account/record:
 - Generate random salt.
 - Append or prepend the salt value to the user's password.
