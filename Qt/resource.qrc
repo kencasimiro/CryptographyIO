@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/database"/>
+    <qresource prefix="/">
+        <file>database/HashSaltPassword.db</file>
+    </qresource>
+    <qresource prefix="/new/prefix1">
+        <file>database/HashSaltPassword.db</file>
+    </qresource>
+</RCC>

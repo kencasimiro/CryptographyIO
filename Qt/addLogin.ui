@@ -31,7 +31,12 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_EMAIL"/>
+     <widget class="QLineEdit" name="lineEdit_EMAIL">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0,0,0);
+background-color: rgb(255,255,255)</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -53,7 +58,12 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_USERNAME"/>
+     <widget class="QLineEdit" name="lineEdit_USERNAME">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0,0,0);
+background-color: rgb(255,255,255)</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -75,7 +85,12 @@
      </widget>
     </item>
     <item>
-     <widget class="QLineEdit" name="lineEdit_PASSWORD"/>
+     <widget class="QLineEdit" name="lineEdit_PASSWORD">
+      <property name="styleSheet">
+       <string notr="true">color: rgb(0,0,0);
+background-color: rgb(255,255,255)</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>

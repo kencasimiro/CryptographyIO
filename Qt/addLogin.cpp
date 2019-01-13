@@ -39,18 +39,18 @@ void addLogin::on_pushButton_SUBMIT_clicked()
 
     QString salt = GetRandomString();                           // calls GetRandomString to generate a random 12 character string
 
-    qDebug() << password << " <---- BEFORE SALT - addLogin";               // error-check in console for password
-    qDebug() << salt     << " <---- AFTER random string - addLogin";       // error-check in console for random generated string (salt)
+    qDebug() << "User entered password to create a login account: " << password;               // error-check in console for password
+    qDebug() << "Random generated salt to be associated with this account: " << salt;       // error-check in console for random generated string (salt)
 
     password = password + salt;                                 // combines the password and salt
 
-    qDebug() << password << " <---- AFTER SALT - addLogin";                // error-check in console for the password+salt
+    qDebug() << "The added password and salt together: " <<  password;                // error-check in console for the password+salt
 
     QByteArray hash = QCryptographicHash::hash(password.toLocal8Bit(), QCryptographicHash::Sha256);     // cmputes the hash of the password+salt with the SHA256 algorithm
 
     hash = hash.toHex();            // converts the hash to hex for ASCII (string)
 
-    qDebug() << hash << " <----- HASH - addLogin";                         // error check in console for generated hash
+    qDebug() << "The hashed password + salt of this account: " << hash;                         // error check in console for generated hash
 
     bool n;
 
@@ -65,7 +65,8 @@ void addLogin::on_pushButton_SUBMIT_clicked()
         query.bindValue(":password", password);     // gets user input into SQL for password
         query.exec();                               // executes the prepare
 
-        QMessageBox::information(this,QObject::tr("System Message"),tr("Login record has been created!"),QMessageBox::Ok); // message if success
+        QMessageBox::information(this,QObject::tr("System Message"),tr("Login record has been created!"),QMessageBox::Ok); // message if successs
+        qDebug() << "Login account has been successfully created.";
     }
     else
     {

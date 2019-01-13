@@ -12,7 +12,6 @@
 
 const int UNASSIGNED_DB_ID = -1;    // for database error check
 
-
 // PLEASE READ
 // -----------
 // CHANGE PATH TO YOUR OWN DATABASE CONNECTION  <------ PLEASE READ ****************** :)

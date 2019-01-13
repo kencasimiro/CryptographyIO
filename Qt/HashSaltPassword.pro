@@ -56,3 +56,5 @@ FORMS += \
     deleteLogin.ui \
     forgotUsername.ui \
     forgotPassword.ui
+
+RESOURCES +=

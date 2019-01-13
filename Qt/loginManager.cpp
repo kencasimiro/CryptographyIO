@@ -136,18 +136,19 @@ login loginManager::authenticate(const QString &Username, const QString &Passwor
             QString dbsalt     = query.value(idSalt).toString();        // used for compare
                 int dbid       = query.value(idID).toInt();             // used for compare
 
-            qDebug() << dbsalt << " <---- SALT (AUTHENTICATE)";
+            qDebug() << "Salt associated with the user account: " << dbsalt;
             QString temp;
             temp = Password + dbsalt;   // combines user input password and stored salt
 
-            qDebug() << temp << " <---- PASSWORD + SALT (AUTHENTICATE)";
+            qDebug() << "Salt and user entered password is added together: " << temp;
 
             QByteArray hash = QCryptographicHash::hash(temp.toLocal8Bit(), QCryptographicHash::Sha256);     // hashes the password+salt
             hash = hash.toHex();        // makes it into ASCII (string)
-            qDebug() << hash << " <----- HASHED PASSWORD (AUTHENTICATE)";
+            qDebug() << "Hashed password of the above password + salt: " << hash;
 
             if(dbpassword == hash)      // checks if its the same
             {
+                qDebug() << "Hashed password matches with the stored hashed password that was saved" << hash;
                 return login(dbid, dbemail, dbusername, dbpassword, dbsalt); // returns the record if it is
             }
         }

@@ -20,6 +20,9 @@ void loginWindow::on_pushButton_submit_clicked()
     QString username = ui->lineEdit_Username->text();       // user input - username
     QString password = ui->lineEdit_Password->text();       // user input - password
 
+    qDebug() << "User entered username: " << ui->lineEdit_Username->text();
+    qDebug() << "User entered password: " << ui->lineEdit_Password->text();
+
     login temp;
 
     temp = loginManager::instance().authenticate(username, password);   // checks if its authentic
