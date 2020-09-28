@@ -39,4 +39,4 @@ Run in Qt 5.11.0
 
 * **Kenneth Casimiro** - Programmer - [kencasimiro](https://github.com/kencasimiro)
 
-See also the list of [contributors](https://github.com/boolenciaga/CryptographyIO/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/kencasimiro/CryptographyIO/graphs/contributors) who participated in this project.
