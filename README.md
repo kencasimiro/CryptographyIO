@@ -1,7 +1,7 @@
 # Cryptography IO
 A qt application that allows the user to create an account (username and password) through a one way cryptographic function (SHA256). Program also creates a salt to be added to the pre-hash password to safeguard passwords in storage. Password and salt is stored in SQLite as hashed. User is able to change their password as well and see through the console of what the one way function hashes out. The program demonstrates the importance of using a one-way cryptographic function rather than 'encryption' so no one can decrypt the password back to the original text.
 
-![Image description](https://github.com/kencasimiro/cryptopgrahyIO/blob/master/Application%20Screenshots/Screen%20Shot%202019-01-13%20at%204.31.57%20AM.png)
+![Image description](https://github.com/kencasimiro/CryptographyIO/blob/master/Application%20Screenshots/Screen%20Shot%202019-01-13%20at%204.31.57%20AM.png)
 
 ![Image description](https://github.com/kencasimiro/cryptographyIO/blob/master/Application%20Screenshots/Screen%20Shot%202019-01-13%20at%204.32.50%20AM.png)
 
