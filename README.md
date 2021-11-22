@@ -16,10 +16,6 @@ When the user attempts to sign in:
 - Append or prepend (ie. do the same as when they registered) the salt to the supplied password.
 - Hash the combination, compare that to the stored hash. If they're different, sign-in fails.
 
-### Prerequisites
-
-Know C++
-
 ### Coding Style
 
 C++ Language
